@@ -15,8 +15,7 @@ RUN git clone https://github.com/maurovictor/js_flask
 WORKDIR js_flask 
 
 ## Installing necessary python packages
-RUN  pip3 install -r requirements.txt
-
+RUN pip3 install -r requirements.txt
 ## Flask environment variables 
 ENV LC_ALL=C.UTF-8
 ENV LANG=C.UTF-8
