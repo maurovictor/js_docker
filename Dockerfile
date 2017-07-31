@@ -24,9 +24,6 @@ ENV FLASK_APP="application.py"
 
 ## Necessary to route some port with -p or -P parameter
 ## Expose port 5000 
-EXPOSE 5000 80
+EXPOSE 5000
 
 CMD ["flask","run","--host=0.0.0.0"]
-
-
-
