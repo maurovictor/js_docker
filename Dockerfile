@@ -23,6 +23,6 @@ ENV FLASK_APP="application.py"
 
 ## Necessary to route some port with -p or -P parameter
 ## Expose port 5000 
-EXPOSE 5000
+EXPOSE 80
 
-CMD ["flask","run","--host=0.0.0.0"]
+CMD uwsgi --http 0.0.0.0:80 --wsgi-file application.py --callable app --processes 4 --threads 2 --stats 0.0.0.0:9191
